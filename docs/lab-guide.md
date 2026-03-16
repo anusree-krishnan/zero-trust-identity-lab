@@ -64,3 +64,42 @@ curl http://<ubuntu-tailscale-ip>:8080
 If successful, the web server should return a directory listing.
 
 This confirms that the service is reachable through the Tailscale network.
+## Step 3: Micro-Segmentation Using Tailscale ACLs
+
+Micro-segmentation limits network access to only the services that are explicitly required.
+
+In this lab, we restrict access so that users can only reach the web service running on port 8080.
+
+### Tailscale ACL Policy
+
+The following policy allows network members to access only port 8080.
+
+```json
+{
+  "acls": [
+    {
+      "action": "accept",
+      "src": ["autogroup:members"],
+      "dst": ["*:8080"]
+    }
+  ]
+}
+```
+
+This rule allows connections only to port 8080 while blocking other services such as SSH.
+
+### Testing the Policy
+
+Allowed request:
+
+```bash
+curl http://<ubuntu-ip>:8080
+```
+
+Blocked request:
+
+```bash
+ssh <ubuntu-ip>
+```
+
+The SSH request should fail, demonstrating that lateral movement is restricted.
