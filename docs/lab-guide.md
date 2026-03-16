@@ -96,10 +96,14 @@ Allowed request:
 curl http://<ubuntu-ip>:8080
 ```
 
+This request should succeed and return the web server response.
+
 Blocked request:
 
 ```bash
 ssh <ubuntu-ip>
 ```
 
-The SSH request should fail, demonstrating that lateral movement is restricted.
+The SSH connection will hang or timeout because port 22 is not allowed by the ACL policy.
+
+This demonstrates that lateral movement between services is restricted.
