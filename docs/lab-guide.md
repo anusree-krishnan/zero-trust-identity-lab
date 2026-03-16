@@ -12,3 +12,23 @@ This lab demonstrates how organisations move from traditional perimeter security
 2. Micro-Segmentation
 3. Principle of Least Privilege
 4. Generative AI Security Analysis
+
+## Step 1: Identity-Centric Connectivity
+
+In traditional networks, access is granted based on IP addresses. 
+In a Zero Trust Architecture, access decisions are based on identity and policy enforcement.
+
+To create an identity-based network, we use Tailscale.
+
+### Install Tailscale
+
+Run the following command on both Ubuntu and Kali machines:
+  curl -fsSL https://tailscale.com/install.sh | sh
+
+Then authenticate using GitHub SSO:
+  sudo tailscale up
+
+Verify the connection:
+  tailscale status
+
+Both machines should now appear in the Tailscale network.
