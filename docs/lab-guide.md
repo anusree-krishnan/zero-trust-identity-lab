@@ -41,3 +41,26 @@ tailscale status
 ```
 
 Both machines should now appear in the Tailscale network.
+## Step 2: Creating a Protected Service
+
+To demonstrate micro-segmentation, we first create a simple web service on the Ubuntu server.
+
+Run the following command on the Ubuntu machine:
+
+```bash
+python3 -m http.server 8080
+```
+
+This starts a temporary web server on port 8080.
+
+### Testing the Service
+
+From the Kali machine, test access using:
+
+```bash
+curl http://<ubuntu-tailscale-ip>:8080
+```
+
+If successful, the web server should return a directory listing.
+
+This confirms that the service is reachable through the Tailscale network.
