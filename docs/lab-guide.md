@@ -107,3 +107,46 @@ ssh <ubuntu-ip>
 The SSH connection will hang or timeout because port 22 is not allowed by the ACL policy.
 
 This demonstrates that lateral movement between services is restricted.
+## Step 4: Principle of Least Privilege
+
+The Principle of Least Privilege ensures that users only have the minimum permissions necessary to perform their tasks.
+
+In this lab, we create a restricted administrator role called **junioradmin**.
+
+### Create the User
+
+```bash
+sudo adduser junioradmin
+```
+
+### Configure Limited Sudo Access
+
+Edit the sudo policy:
+
+```bash
+sudo visudo
+```
+
+Add the following rule:
+
+```
+junioradmin ALL=(ALL) NOPASSWD: /bin/systemctl restart demo.service
+```
+
+This allows the junior admin to restart the demo service but prevents other privileged actions.
+
+### Testing the Policy
+
+Allowed action:
+
+```bash
+sudo systemctl restart demo.service
+```
+
+Blocked action:
+
+```bash
+sudo cat /etc/shadow
+```
+
+The second command should fail, demonstrating least privilege enforcement.
