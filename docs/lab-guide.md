@@ -23,12 +23,21 @@ To create an identity-based network, we use Tailscale.
 ### Install Tailscale
 
 Run the following command on both Ubuntu and Kali machines:
-  curl -fsSL https://tailscale.com/install.sh | sh
+
+```bash
+curl -fsSL https://tailscale.com/install.sh | sh
+```
 
 Then authenticate using GitHub SSO:
-  sudo tailscale up
+
+```bash
+sudo tailscale up
+```
 
 Verify the connection:
-  tailscale status
+
+```bash
+tailscale status
+```
 
 Both machines should now appear in the Tailscale network.
