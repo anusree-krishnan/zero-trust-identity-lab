@@ -78,10 +78,10 @@ See the step-by-step guide here:
 
 ```mermaid
 graph TD
-    A[Kali Analyst Machine] -->|Authenticated via Tailscale| B[Zero Trust Network]
-    B -->|ACL allows only port 8080| C[Ubuntu Server]
-    C --> D[demo service]
+    A[Kali Machine] -->|Tailscale Identity| B[Zero Trust Network]
+    B -->|Allow 8080 Only| C[Ubuntu Server]
+    C --> D[Web Service]
 
-    C --> E[Auth Log File]
-    E --> F[AI Analysis using ChatGPT]
+    C --> E[Auth Logs]
+    E --> F[AI Analysis]
 ```
