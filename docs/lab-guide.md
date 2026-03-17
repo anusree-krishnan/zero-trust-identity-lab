@@ -1,4 +1,5 @@
 > ⚠️ **Lab Tip:** Use two terminals on Ubuntu — one for running services and one for configuration.
+>
 # Zero Trust Identity Lab Guide
 
 This guide walks through building a Zero Trust Architecture using Tailscale and Linux security controls.
