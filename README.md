@@ -1,3 +1,7 @@
+![Status](https://img.shields.io/badge/status-complete-success)
+![Security](https://img.shields.io/badge/focus-zero--trust-blue)
+![Platform](https://img.shields.io/badge/platform-linux-lightgrey)
+![License](https://img.shields.io/badge/license-MIT-green)
 # Zero Trust & Identity Lab
 
 A hands-on cybersecurity lab demonstrating how to transition from traditional perimeter security to a **Zero Trust Architecture (ZTA)**.
