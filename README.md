@@ -75,14 +75,13 @@ See the step-by-step guide here:
 
 `docs/lab-guide.md`
 ## Architecture Diagram
+
 ```mermaid
 graph TD
     A[Kali Analyst Machine] -->|Authenticated via Tailscale| B[Zero Trust Network]
-    B -->|ACL: Allow 8080 Only| C[Ubuntu Server]
-    C --> D[demo.service (Web Server)]
+    B -->|ACL allows only port 8080| C[Ubuntu Server]
+    C --> D[demo service]
 
-    C --> E[Auth Logs]
-    E --> F[AI Analysis (ChatGPT)]
-
-    style B fill:#f9f,stroke:#333,stroke-width:2px
+    C --> E[Auth Log File]
+    E --> F[AI Analysis using ChatGPT]
 ```
