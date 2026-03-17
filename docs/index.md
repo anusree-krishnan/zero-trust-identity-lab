@@ -21,15 +21,7 @@ A hands-on lab demonstrating the transition from traditional perimeter security 
 
 ## 🏗 Architecture Overview
 
-```mermaid
-graph TD
-    A[Kali Machine] -->|Tailscale Identity| B[Zero Trust Network]
-    B -->|Allow 8080 Only| C[Ubuntu Server]
-    C --> D[Web Service]
-
-    C --> E[Auth Logs]
-    E --> F[AI Analysis]
-```
+![Zero Trust Architecture](../diagrams/architecture.png)
 
 ---
 
