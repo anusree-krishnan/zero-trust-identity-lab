@@ -21,8 +21,7 @@ A hands-on lab demonstrating the transition from traditional perimeter security 
 
 ## 🏗 Architecture Overview
 
-![Zero Trust Architecture](/zero-trust-identity-lab/diagrams/architecture.png)
-
+![Zero Trust Architecture](https://raw.githubusercontent.com/anusree-krishnan/zero-trust-identity-lab/main/diagrams/architecture.png)
 ---
 
 ## 🎯 Key Security Outcomes
