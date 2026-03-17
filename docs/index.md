@@ -21,7 +21,7 @@ A hands-on lab demonstrating the transition from traditional perimeter security 
 
 ## 🏗 Architecture Overview
 
-![Zero Trust Architecture](../diagrams/architecture.png)
+![Zero Trust Architecture](/zero-trust-identity-lab/diagrams/architecture.png)
 
 ---
 
