@@ -150,3 +150,14 @@ sudo cat /etc/shadow
 ```
 
 The second command should fail, demonstrating least privilege enforcement.
+
+## 🔍 Security Insights
+
+This lab demonstrates how Zero Trust principles can be practically implemented:
+
+- Identity replaces network location as the trust boundary  
+- Access is explicitly defined using policies  
+- Privileged actions are tightly controlled  
+- All actions are logged and auditable  
+
+The blocked `sudo` attempt in the logs highlights how effective access control prevents privilege escalation attacks.
