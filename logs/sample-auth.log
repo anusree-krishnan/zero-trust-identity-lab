@@ -1,1 +1,3 @@
 Sample authentication logs for AI analysis
+Mar 17 13:37:13 ubuntu sudo: junioradmin : command not allowed ; COMMAND=/usr/bin/tail -n 20 /var/log/auth.log
+Mar 17 13:40:23 ubuntu sudo: anu : COMMAND=/usr/bin/tail -n 20 /var/log/auth.log
